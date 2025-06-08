@@ -5,6 +5,14 @@
     </head>
     <body>
 
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>@TempData["SuccessMessage"]</strong>
+                        <button type="button" class="btn btn-close btn-sm " data-bs-dismiss="alert" aria-label="Close">Close</button>
+        </div>
+    }
+
 
 	<h1>Bookings</h1>
     <section class="content-header">
