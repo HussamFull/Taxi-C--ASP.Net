@@ -1,0 +1,84 @@
+﻿@using Taxi.Models
+@{
+    ViewData["Title"] = "All Users"; // This title will be used by _Layout.cshtml
+    Layout = "_Layout"; // Explicitly specify the layout if not set globally in _ViewImports.cshtml
+}
+
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Users</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">Users</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">All Booking Users</h3>
+                    </div>
+                    <div class="card-body">
+                        <table id="usersTable" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone Number</th>
+                                    <th>Startziel</th>
+                                    <th>Zielort</th>
+                                    <th>Booking Time</th>
+                                    <th>User Id</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var booking in Model)
+                                {
+                                    <tr>
+                                        <td>@booking.Id</td>
+                                        <td>@booking.Name</td>
+                                        <td>@booking.Email</td>
+                                        <td>@booking.PhoneNumber</td>
+                                        <td>@booking.Startziel</td>
+                                        <td>@booking.Zielort</td>
+                                        <td>@booking.BookingTime</td>
+                                        <td>@booking.UserId</td>
+                                        <td>
+                                            <a href="/Bookings/Edit/@booking.Id" class="btn btn-info btn-sm">Edit</a>
+                                            <a href="/Bookings/Delete/@booking.Id" class="btn btn-danger btn-sm">Delete</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone Number</th>
+                                    <th>Startziel</th>
+                                    <th>Zielort</th>
+                                    <th>Booking Time</th>
+                                    <th>User Id</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
