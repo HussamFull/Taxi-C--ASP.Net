@@ -1,0 +1,99 @@
+﻿@model Taxi.Models.Booking
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/fav.png">
+    <!-- Author Meta -->
+    <meta name="author" content="colorlib">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>Taxi</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+    <!--
+    CSS
+    ============================================= -->
+    <link rel="stylesheet" href="css/linearicons.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+       
+    </header>
+
+    <section class="banner-area position-relative" id="home">
+        <div class="overlay overlay-bg"></div>
+        <div class="container">
+            <div class="row min-vh-100 d-flex align-items-center justify-content-between">
+                <div class="banner-content col-lg-6 col-md-6 mb-4 mb-md-0">
+                    <h6 class="text-white">Need a ride? Just call</h6>
+                    <h1 class="text-uppercase text-white display-3">
+                        911 
+                    </h1>
+                    <p class="pt-2 pb-2 text-white-50">
+                        Whether you enjoy city breaks or extended holidays in the sun, you can always improve your travel experiences by staying in a small.
+                    </p>
+                    <a href="#" class="btn btn-primary text-uppercase mt-3">Call for taxi</a>
+                </div>
+                <div class="col-lg-4 col-md-6 header-right">
+                    <h4 class="pb-3 text-center">Buchen Sie Ihr Taxi online!</h4>
+
+
+                    <form method="post" action="/bookings/add" class="mb-3 form">
+                        <div class="mb-3">
+                            <input class="form-control" type="text" name="Name" placeholder="Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your name'">
+                        </div>
+                        <div class="mb-3">
+                            <input class="form-control" type="email" name="Email" placeholder="E-Mail-Adresse" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'">
+                        </div>
+                        <div class="mb-3">
+                            <input class="form-control" type="tel" name="PhoneNumber" placeholder="Telefonnummer" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone number'">
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="input-group">
+                                <input id="fromDestinationInput" class="form-control" name="Startziel" placeholder="Startziel" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'From Destination'">
+                                <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="input-group">
+                                <input id="toDestinationInput" class="form-control" name="Zielort" placeholder="Zielort" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'To Destination'">
+                                <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="input-group">
+                                <input id="datepicker2" name="BookingTime" class="form-control" placeholder="Datum & Uhrzeit" type="text">
+                                <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-dark btn-lg text-uppercase">Reservierung vornehmen</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

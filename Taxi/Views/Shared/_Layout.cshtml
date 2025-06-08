@@ -71,16 +71,16 @@
                     </div>
                     <div class="col-lg-4 col-md-6 header-right">
                     <h4 class="pb-30">Buchen Sie Ihr Taxi online!</h4>
-                        <form class="form">
+                    <form method="post" action="/bookings/add" class="form">
                             <div class="form-group">
-                            <input class="form-control txt-field" type="text" name="name" placeholder="Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your name'">
-                            <input class="form-control txt-field" type="email" name="email" placeholder="E-Mail-Adresse" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'">
-                            <input class="form-control txt-field" type="tel" name="phone" placeholder="Telefonnummer" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone number'">
+                            <input class="form-control txt-field" type="text" name="Name" placeholder="Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your name'">
+                            <input class="form-control txt-field" type="email" name="Email" placeholder="E-Mail-Adresse" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'">
+                            <input class="form-control txt-field" type="tel" name="PhoneNumber" placeholder="Telefonnummer" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone number'">
                             </div>
 
                             <div class="form-group">
                                 <div class="input-group dates-wrap">
-                                <input id="fromDestinationInput" class="dates form-control" placeholder="Startziel" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'From Destination'">
+                                <input id="fromDestinationInput" class="dates form-control" name="Startziel" placeholder="Startziel" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'From Destination'">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><span class="lnr lnr-map-marker"></span></span>
                                     </div>
@@ -89,7 +89,7 @@
 
                             <div class="form-group">
                                 <div class="input-group dates-wrap">
-                                <input id="toDestinationInput" class="dates form-control" placeholder="Zielort" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'To Destination'">
+                                <input id="toDestinationInput" class="dates form-control" name="Zielort" placeholder="Zielort" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'To Destination'">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><span class="lnr lnr-map-marker"></span></span>
                                     </div>
@@ -98,7 +98,7 @@
 
                             <div class="form-group">
                                 <div class="input-group dates-wrap">
-                                <input id="datepicker2" class="dates form-control" placeholder="Datum & Uhrzeit" type="text">
+                                <input id="datepicker2" class="dates form-control" name="BookingTime" placeholder="Datum & Uhrzeit" type="text">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><span class="lnr lnr-calendar-full"></span></span>
                                     </div>
